@@ -75,8 +75,10 @@ O **TechPulse** é um portal de notícias de tecnologia com linguagem visual edi
     <th>Página de matéria (1440px)</th>
   </tr>
   <tr>
-    <td valign="top"><img src="docs/preview-mobile.jpg" alt="Página inicial em smartphone, com botão de menu e manchete em coluna única" width="260"></td>
-    <td valign="top"><img src="docs/preview-materia.png" alt="Página de matéria com trilha de navegação, chapéu de categoria, manchete grande, linha fina e metadados" width="560"></td>
+    <td valign="top"><img width="780" height="1688" alt="preview-mobile" src="https://github.com/user-attachments/assets/3996c265-e36d-4473-a9d2-b8b91e9a9287" />
+</td>
+    <td valign="top"><img width="1440" height="1000" alt="preview-materia" src="https://github.com/user-attachments/assets/24738995-7465-4aed-b7df-69aeb8cf0dc2" />
+ alt="Página de matéria com trilha de navegação, chapéu de categoria, manchete grande, linha fina e metadados" width="560"></td>
   </tr>
 </table>
 

@@ -23,7 +23,8 @@ construído com HTML5 semântico e CSS3 puro.
 
 <br>
 
-<img src="docs/preview-desktop.png" alt="Página inicial do TechPulse em tela de desktop: cabeçalho escuro com o logotipo, menu de editorias, manchete principal com ilustração de rede neural e coluna lateral com destaques e mais lidas" width="900">
+<img width="1440" height="1000" alt="preview-desktop" src="https://github.com/user-attachments/assets/7922836b-4d81-4864-91b2-76b9ebad0acb" />
+alt="Página inicial do TechPulse em tela de desktop: cabeçalho escuro com o logotipo, menu de editorias, manchete principal com ilustração de rede neural e coluna lateral com destaques e mais lidas" width="900">
 
 </div>
 

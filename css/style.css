@@ -1,39 +1,14 @@
-/* ==========================================================================
-   TechPulse — Folha de estilos principal
-   --------------------------------------------------------------------------
-   Estratégia: mobile-first. As regras base atendem smartphones (360px+)
-   e as media queries ampliam o layout para tablet, notebook e desktop.
 
-   Sumário
-   01. Variáveis (design tokens)
-   02. Reset e Box Model
-   03. Seletores de tag (base tipográfica)
-   04. Componentes reutilizáveis (classes)
-   05. Cabeçalho institucional (#cabecalho)
-   06. Faixa "Em pauta"
-   07. Hero editorial
-   08. Seções e cabeçalhos de seção
-   09. Últimas notícias
-   10. Editorias
-   11. Tendências
-   12. Newsletter
-   13. Rodapé
-   14. Página de matéria
-   15. Media queries
-   ========================================================================== */
-
-
-/* 01. Variáveis ============================================================ */
 :root {
   /* Cores */
   --color-bg: #F5F5F2;
   --color-surface: #FFFFFF;
   --color-text: #171717;
   --color-text-soft: #3A3A3A;
-  --color-muted: #666666;          /* ajuste do #777777 para atingir contraste AA */
-  --color-accent: #E94F37;         /* preenchimentos, barras, textos grandes */
-  --color-accent-strong: #C33A22;  /* textos pequenos em fundo claro (AA) */
-  --color-ink: #111827;            /* cabeçalho e áreas institucionais */
+  --color-muted: #666666;          
+  --color-accent: #E94F37;         
+  --color-accent-strong: #C33A22;  
+  --color-ink: #111827;            
   --color-ink-soft: #1F2937;
   --color-ink-line: #2B3544;
   --color-ink-muted: #A1A8B3;
@@ -42,11 +17,10 @@
   --color-success: #1F7A4D;
   --color-overlay: rgba(17, 24, 39, 0.78);
 
-  /* Tipografia */
+  /* fontes legais */
   --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* Espaçamento (escala de 4px) */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -56,7 +30,6 @@
   --space-7: 3rem;
   --space-8: 4rem;
 
-  /* Layout */
   --gutter: 1rem;
   --max-width: 80rem;
   --section-gap: clamp(3rem, 2rem + 4vw, 5.5rem);
@@ -64,11 +37,10 @@
 }
 
 
-/* 02. Reset e Box Model ==================================================== */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;   /* largura inclui padding e border */
+  box-sizing: border-box;   
 }
 
 html {
@@ -102,7 +74,6 @@ input {
 }
 
 
-/* 03. Seletores de tag ===================================================== */
 body {
   min-height: 100vh;
   font-family: var(--font-body);
@@ -153,7 +124,6 @@ time {
 }
 
 
-/* 04. Componentes reutilizáveis ============================================ */
 .container {
   width: min(100% - 2 * var(--gutter), var(--max-width));
   margin-inline: auto;
@@ -176,7 +146,7 @@ time {
   outline-color: var(--color-surface);
 }
 
-/* Rótulo de categoria (chapéu editorial) */
+
 .kicker {
   display: flex;
   align-items: center;
@@ -219,7 +189,7 @@ time {
   background-color: var(--color-ink);
 }
 
-/* Metadados (autor, data, tempo de leitura) */
+
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -240,14 +210,14 @@ time {
   color: var(--color-text);
 }
 
-/* Legenda de imagem */
+
 .caption {
   margin-top: var(--space-2);
   font-size: 0.75rem;
   color: var(--color-muted);
 }
 
-/* Título-rótulo em caixa alta (blocos laterais) */
+
 .label-heading {
   display: flex;
   align-items: center;
@@ -260,7 +230,7 @@ time {
   text-transform: uppercase;
 }
 
-/* Botões (links estilizados como ação) */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -327,7 +297,6 @@ time {
   transform: translateX(3px);
 }
 
-/* Lista de etiquetas (subcategorias) */
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -346,7 +315,6 @@ time {
 }
 
 
-/* 05. Cabeçalho institucional ============================================== */
 #cabecalho {
   background-color: var(--color-ink);
   color: var(--color-surface);
@@ -418,7 +386,6 @@ time {
   display: none;
 }
 
-/* Botão do menu (telas menores) */
 .nav-toggle {
   display: none;
   align-items: center;
@@ -477,14 +444,14 @@ time {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Navegação principal */
+
 .main-nav {
   border-top: 1px solid var(--color-ink-line);
 }
 
 .main-nav__list {
   display: flex;
-  overflow-x: auto;           /* sem JavaScript: menu rolável dentro da faixa */
+  overflow-x: auto;          
   list-style: none;
   scrollbar-width: none;
 }
@@ -505,7 +472,7 @@ time {
   border-bottom-color: var(--color-ink-muted);
 }
 
-/* Indicador visual da seção ativa */
+
 .main-nav__link[aria-current="page"] {
   color: var(--color-surface);
   font-weight: 600;
@@ -521,7 +488,6 @@ time {
 }
 
 
-/* 06. Faixa "Em pauta" ===================================================== */
 .agenda {
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-line);
@@ -569,7 +535,6 @@ time {
 }
 
 
-/* 07. Hero editorial ======================================================= */
 .hero {
   padding-block: var(--space-6) var(--space-7);
 }
@@ -683,7 +648,6 @@ time {
 }
 
 
-/* 08. Seções ============================================================== */
 .section {
   padding-block: var(--section-gap);
 }
@@ -708,7 +672,6 @@ time {
 }
 
 
-/* 09. Últimas notícias ===================================================== */
 .latest {
   padding-top: 0;
 }
@@ -811,7 +774,6 @@ time {
 }
 
 
-/* 10. Editorias ============================================================ */
 .desks {
   background-color: var(--color-surface);
   border-block: 1px solid var(--color-line);
@@ -819,7 +781,7 @@ time {
 
 .desks__grid {
   display: grid;
-  gap: 1px;                               /* linhas finas entre as colunas */
+  gap: 1px;                              
   background-color: var(--color-line);
   border: 1px solid var(--color-line);
 }
@@ -897,7 +859,6 @@ time {
 }
 
 
-/* 11. Tendências =========================================================== */
 .trends__grid {
   display: grid;
   gap: var(--space-7);
@@ -982,7 +943,6 @@ time {
 }
 
 
-/* 12. Newsletter =========================================================== */
 .newsletter {
   padding-block: var(--section-gap);
   background-color: var(--color-accent);
@@ -1097,7 +1057,6 @@ time {
 }
 
 
-/* 13. Rodapé =============================================================== */
 .site-footer {
   padding-top: var(--space-8);
   background-color: var(--color-ink);
@@ -1176,7 +1135,6 @@ time {
 }
 
 
-/* 14. Página de matéria ==================================================== */
 .article {
   padding-block: var(--space-6) var(--section-gap);
 }
@@ -1329,9 +1287,9 @@ time {
 }
 
 
-/* 15. Media queries ======================================================== */
 
-/* Smartphones grandes (480px+) */
+
+
 @media (min-width: 480px) {
   .subscribe__row {
     flex-direction: row;
@@ -1342,7 +1300,7 @@ time {
   }
 }
 
-/* Tablets pequenos (600px+) */
+
 @media (min-width: 600px) {
   :root {
     --gutter: 1.5rem;
@@ -1366,7 +1324,7 @@ time {
   }
 }
 
-/* Tablet (768px+) */
+
 @media (min-width: 768px) {
   .lead__body {
     margin: -5rem var(--space-8) 0 0;
@@ -1416,7 +1374,7 @@ time {
   }
 }
 
-/* Menu recolhível apenas com JavaScript ativo e abaixo de 1024px */
+
 @media (max-width: 1023.98px) {
   .js .main-nav__list {
     display: none;
@@ -1445,7 +1403,7 @@ time {
   }
 }
 
-/* Notebook e desktop (1024px+) */
+
 @media (min-width: 1024px) {
   :root {
     --gutter: 2rem;
@@ -1544,7 +1502,7 @@ time {
   }
 }
 
-/* Desktop amplo (1280px+) */
+
 @media (min-width: 1280px) {
   .desks__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1560,7 +1518,7 @@ time {
   }
 }
 
-/* Preferência por menos movimento */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

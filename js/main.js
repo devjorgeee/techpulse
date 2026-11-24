@@ -1,17 +1,9 @@
-/* ==========================================================================
-   TechPulse — interações complementares
-   O site funciona sem JavaScript. Este arquivo apenas:
-   1. recolhe o menu em telas menores (botão "Menu");
-   2. faz a validação demonstrativa do formulário da newsletter.
-   Nenhum dado é enviado a servidores.
-   ========================================================================== */
+
 (function () {
   'use strict';
 
-  // Sinaliza ao CSS que o JavaScript está ativo (menu recolhível)
   document.documentElement.classList.add('js');
 
-  /* 1. Menu responsivo ---------------------------------------------------- */
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
 
@@ -25,14 +17,13 @@
       setMenu(toggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    // Fecha o menu ao escolher um link
+ 
     nav.addEventListener('click', function (event) {
       if (event.target.closest('a')) {
         setMenu(false);
       }
     });
 
-    // Fecha o menu com a tecla Esc e devolve o foco ao botão
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && nav.classList.contains('is-open')) {
         setMenu(false);
@@ -41,7 +32,7 @@
     });
   }
 
-  /* 2. Newsletter (demonstração, sem envio) ------------------------------- */
+
   var form = document.getElementById('form-newsletter');
 
   if (form) {
